@@ -1,0 +1,14 @@
+version: '3'
+services:
+    msj-football:
+        container_name: msj-football
+        image: msj-football:prod
+        ports:
+            - "9102:9102"
+        restart: always
+        networks:
+            - default
+            - app_net
+networks: 
+    app_net:
+        external: true
